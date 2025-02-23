@@ -1,0 +1,26 @@
+{
+    "name": "React Native Android Development",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": "."
+    },
+    "forwardPorts": [8081],
+    "postCreateCommand": "RUN npm install",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "dbaeumer.vscode-eslint",
+                "esbenp.prettier-vscode",
+                "msjsdiag.vscode-react-native"
+            ]
+        }
+    },
+    "remoteUser": "root",
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils:2": {
+            "installZsh": true,
+            "configureZshAsDefaultShell": true,
+            "installOhMyZsh": true
+        }
+    }
+}
